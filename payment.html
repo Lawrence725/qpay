@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>點點付</title>
+        <link rel="icon" type="image/png" href="img/favicon.png"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC">
+        <!-- Google Icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body fixed payment"> <!-- class: fixed -->
+            <!-- Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <div class="itemH width padding between radius">
+                    <div class="img"><img src="img/logo.png"></div>
+                    <span class="fM bold white margin">臺東美味麵食店</span>
+                </div>
+                <div class="itemH width start middle radius">
+                    <span class="fM single"><span class="step"><span class="stepText">Step</span>1.</span> 捐一點</span> <!-- class: active -->
+                    <div class="icon gray"><i class="fas fa-long-arrow-alt-right"></i></div>
+                    <span class="fM single"><span class="step"><span class="stepText">Step</span>2.</span> 輸入金額</span> <!-- class: active -->
+                    <div class="icon gray"><i class="fas fa-long-arrow-alt-right"></i></div>
+                    <span class="fM single active"><span class="step"><span class="stepText">Step</span>3.</span> 付款方式</span> <!-- class: active -->
+                </div>
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <span class="fM">您即將支付</span>
+                <div class="itemH width middle margin"> <!-- class: number -->
+                    <span class="fXL third">$119</span>
+                </div>
+                <span class="fM gray">給</span>
+                <span class="fL gray">臺東美味麵食店</span>
+                <a class="itemH width end">
+                    <span class="fM">付款資訊</span>
+                    <div class="icon black"><i class="fas fa-angle-up"></i></div>
+                    <!-- <div class="icon black"><i class="fas fa-angle-down"></i></div> -->
+                </a>
+                <div class="itemV width">
+                    <div class="itemH width margin">
+                        <div class="itemH width end">
+                            <span class="fM gray">付款人姓名：</span>
+                        </div>
+                        <div class="itemH width">
+                            <span class="fM">Peter</span>
+                        </div>
+                    </div>
+                    <div class="itemH width margin">
+                        <div class="itemH width end">
+                            <span class="fM gray">聯絡電話：</span>
+                        </div>
+                        <div class="itemH width">
+                            <span class="fM">0987654321</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemV width">
+                    <div class="itemH width">
+                        <a class="itemH width margin middle checkbox active"> <!-- class: active -->
+                            <div class="img iW"><img src="img/Visa.svg"></div>
+                            <div class="img iW"><img src="img/Mastercard.svg"></div>
+                            <div class="img iW"><img src="img/JCB.svg"></div>
+                        </a>
+                        <a class="itemH width margin middle checkbox"> <!-- class: active -->
+                            <div class="img"><img src="img/linepay.svg"></div>
+                        </a>
+                    </div>
+                    <div class="itemH width">
+                        <a class="itemH width margin middle checkbox"> <!-- class: active -->
+                            <div class="img iH"><img src="img/applepay.svg"></div>
+                        </a>
+                        <a class="itemH width margin middle checkbox"> <!-- class: active -->
+                            <div class="img iH"><img src="img/googlepay.svg"></div>
+                        </a>
+                    </div>
+                    <div class="itemH width">
+                        <a class="itemH width margin middle checkbox"> <!-- class: active -->
+                            <div class="img"><img src="img/jkopay.svg"></div>
+                        </a>
+                        <a class="itemH width margin middle checkbox"> <!-- class: active -->
+                            <div class="img"><img src="img/easywallet.svg"></div>
+                        </a>
+                    </div>
+                    <div class="itemH width">
+                        <a class="itemH width margin middle checkbox"> <!-- class: active -->
+                            <div class="img iH"><img src="img/taiwanpay.svg"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="itemH width">
+                    <a class="button gray" href="input.html">
+                        <span class="fM bold">返回</span>
+                    </a>
+                    <a id="buttonSuccess" class="button">
+                        <span class="fM bold">確定付款</span>
+                    </a>
+                </div>
+                <div class="itemH width between padding">
+                    <div class="itemH">
+                        <a class="textButton fS">EN/繁</a>
+                        <span class="fS gray margin">|</span>
+                        <a id="buttonMessage" class="textButton fS">服務條款</a>
+                        <span class="fS gray margin">|</span>
+                        <a class="textButton fS">隱私權政策</a>
+                    </div>
+                    <span class="fS gray">2022 © QuickPay</span>
+                </div>
+            </section>
+            <!-- Popup (Success) -->
+            <section id="popSuccess" class="popup notice success">
+                <div class="popBody">
+                    <section class="popMain">
+                        <div class="icon secondary"><i class="far fa-check-circle fa-4x"></i></div>
+                        <!-- <div class="icon error"><i class="far fa-times-circle fa-4x"></i></div> -->
+                        <span class="fL">付款成功</span>
+                        <div class="itemH margin padding">
+                            <span class="fXL third">$119</span> <!-- class: third/error -->
+                        </div>
+                        <div class="itemH width">
+                            <div class="itemH width end">
+                                <span class="fM gray">品牌名稱：</span>
+                            </div>
+                            <div class="itemH width">
+                                <span class="fM">臺東美味麵食店</span>
+                            </div>
+                        </div>
+                        <div class="itemH width">
+                            <div class="itemH width end">
+                                <span class="fM gray">付款方式：</span>
+                            </div>
+                            <div class="itemH width">
+                                <span class="fM">Line Pay</span>
+                            </div>
+                        </div>
+                        <div class="itemH width">
+                            <div class="itemH width end">
+                                <span class="fM gray">付款人姓名：</span>
+                            </div>
+                            <div class="itemH width">
+                                <span class="fM">Peter</span>
+                            </div>
+                        </div>
+                        <div class="itemH width">
+                            <div class="itemH width end">
+                                <span class="fM gray">聯絡電話：</span>
+                            </div>
+                            <div class="itemH width">
+                                <span class="fM">0987654321</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button submit"><span class="fS">確定</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (Message) -->
+            <section id="popMessage" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fL">標題</span>
+                    </section>
+                    <section class="popMain">
+                        <span class="fM">訊息1</span>
+                        <span class="fM">訊息2</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button cancel gray"><span class="fS">取消</span></a>
+                        <a class="button submit"><span class="fS">確認</span></a>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <!-- Script -->
+        <script src="index.js"></script>
+    </body>
+</html>
