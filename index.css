@@ -155,6 +155,9 @@ body {
   box-sizing: unset;
   -webkit-box-sizing: unset;
 }
+.body .hide {
+  display: none !important;
+}
 .body .header {
   width: calc(100% - 0px);
   height: fit-content;
