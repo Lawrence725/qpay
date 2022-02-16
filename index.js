@@ -1,3 +1,13 @@
+// Payment Info
+function paymentInfo() {
+    var paymentInfo = document.getElementById('paymentInfo');
+    var infoIcon = document.getElementById('infoIcon');
+    if (paymentInfo.classList.contains('hide'))
+        { paymentInfo.className = 'paymentInfo itemV width show';
+            infoIcon.className = 'icon black rotateB'; }
+    else { paymentInfo.className = 'paymentInfo itemV width hide';
+            infoIcon.className = 'icon black rotateF'; }}
+
 // Popup (Success)
 function popSuccess() {
     var popSuccess  = document.getElementById("popSuccess");

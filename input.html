@@ -45,12 +45,13 @@
                 </div>
                 <span class="fM gray">給</span>
                 <span class="fL gray">臺東美味麵食店</span>
-                <a class="itemH width end">
-                    <span class="fM">付款資訊</span>
-                    <div class="icon black"><i class="fas fa-angle-up"></i></div>
-                    <!-- <div class="icon black"><i class="fas fa-angle-down"></i></div> -->
-                </a>
-                <div class="itemV width"> <!-- class: hide -->
+                <div class="itemH width end">
+                    <a class="itemH" onclick="paymentInfo()">
+                        <span class="fM">付款資訊</span>
+                        <div id="infoIcon" class="icon black"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                </div>
+                <div id="paymentInfo" class="paymentInfo itemV width">
                     <div class="itemH width margin">
                         <div class="itemH width end">
                             <span class="fM gray">付款人姓名：</span>
@@ -68,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="itemV width">
+                <div class="paymentInput itemV width">
                     <div class="itemH width">
                         <a class="itemH width margin middle number">
                             <span class="fXL">1</span>
@@ -133,5 +134,8 @@
                     <span class="fS gray">2022 © QuickPay</span>
                 </div>
             </section>
+        </div>
+        <!-- Script -->
+        <script src="index.js"></script>
     </body>
 </html>

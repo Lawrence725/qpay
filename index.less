@@ -28,9 +28,23 @@ body    { margin: 0; }
         @media @sD, @sT { .img.cover { width: 100%; }}}
 
     &.payment .main .img {
-        &.iW { width: 40px; height: unset; }
-        &.iH { width: unset; height: 25px; }
-        &:not(.iW, .iH) { width: unset; height: 20px; }}
+            &.iW { width: 40px; height: unset; }
+            &.iH { width: unset; height: 25px; }
+            &:not(.iW, .iH) { width: unset; height: 20px; }}
+    .rotateF { animation-name: rotateF; animation-duration: 0.5s; animation-fill-mode: forwards; }
+    .rotateB { animation-name: rotateB; animation-duration: 0.5s; animation-direction: reverse; }
+    @keyframes rotateF { 0% { transform: rotate(0deg); } 100% { transform: rotate(180deg); }}
+    @keyframes rotateB { 0% { transform: rotate(0deg); } 100% { transform: rotate(180deg); }}
+    .paymentInfo { height: 60px !important; 
+        &.hide { animation-name: hide; animation-duration: 0.5s; animation-fill-mode: forwards; }
+        &.show { animation-name: show; animation-duration: 0.5s; animation-direction: reverse; }
+        @keyframes hide { 
+            0% { height: 60px; margin: 10px 0; visibility: visible; } 
+            100% { height: 0; margin: 0; visibility: hidden; }}
+        @keyframes show { 
+            0% { height: 60px; margin: 10px 0; visibility: visible; } 
+            100% { height: 0; margin: 0; visibility: hidden; }}}
+    .paymentInput { background-color: white; }
 
     // Color
     .primary    { color: @c1 !important; }
@@ -71,7 +85,6 @@ body    { margin: 0; }
     *, :after, :before  { box-sizing: unset; -webkit-box-sizing: unset; }
 
     // Container
-    .hide { display: none !important; }
     .header { width: calc(100% - 0px); height: fit-content; padding: 10px 10px 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: space-between;
         .itemH:first-child { background-color: @c1;
             .img { width: 100px; height: unset; }}

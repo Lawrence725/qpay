@@ -35,6 +35,72 @@ body {
   width: unset;
   height: 20px;
 }
+.body .rotateF {
+  animation-name: rotateF;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.body .rotateB {
+  animation-name: rotateB;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+@keyframes rotateF {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotateB {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.body .paymentInfo {
+  height: 60px !important;
+}
+.body .paymentInfo.hide {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.body .paymentInfo.show {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+@keyframes hide {
+  0% {
+    height: 60px;
+    margin: 10px 0;
+    visibility: visible;
+  }
+  100% {
+    height: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+}
+@keyframes show {
+  0% {
+    height: 60px;
+    margin: 10px 0;
+    visibility: visible;
+  }
+  100% {
+    height: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+}
+.body .paymentInput {
+  background-color: white;
+}
 .body .primary {
   color: #FF9900 !important;
 }
@@ -154,9 +220,6 @@ body {
 .body :before {
   box-sizing: unset;
   -webkit-box-sizing: unset;
-}
-.body .hide {
-  display: none !important;
 }
 .body .header {
   width: calc(100% - 0px);
