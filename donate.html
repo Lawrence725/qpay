@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="點點付, QuickPay, QPay">
+        <meta name="description" content="點點付QuickPay">
+        <meta name="author" content="QuickClick">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>點點付</title>
+        <link rel="icon" type="image/png" href="img/favicon.png"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC">
+        <!-- Google Icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Awesome Icon -->
+        <link href="fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body fixed donate"> <!-- class: fixed -->
+            <!-- Spinner -->
+            <!-- <div class="spinner"><div><div></div></div></div> -->
+            <!-- Header -->
+            <section class="header">
+                <div class="itemH width padding between radius">
+                    <div class="img"><img src="img/logo.png"></div>
+                    <span class="fM bold white margin">臺東美味麵食店</span>
+                </div>
+                <div class="itemH width start middle radius">
+                    <span class="fM single active"><span class="step"><span class="stepText">Step</span>1.</span> 捐一點</span> <!-- class: active -->
+                    <div class="icon gray"><i class="fas fa-long-arrow-alt-right"></i></div>
+                    <span class="fM single"><span class="step"><span class="stepText">Step</span>2.</span> 輸入金額</span> <!-- class: active -->
+                    <div class="icon gray"><i class="fas fa-long-arrow-alt-right"></i></div>
+                    <span class="fM single"><span class="step"><span class="stepText">Step</span>3.</span> 付款方式</span> <!-- class: active -->
+                </div>
+            </section>
+            <!-- Main -->
+            <section class="main">
+                <span class="fM">您即將捐款</span>
+                <div class="itemH width middle margin"> <!-- class: number -->
+                    <span class="fXL third">$200</span>
+                </div>
+                <span class="fM gray">給</span>
+                <span class="fL gray">台東縣私立牧心智能發展中心</span>
+                <div class="donateInput itemV width">
+                    <span class="fM margin">捐款人資訊</span>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">姓名<span class="error">*</span></span>
+                        <div class="input"><input type="text" class="fM" placeholder="" value=""></div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">縣市<span class="error">*</span></span>
+                        <div class="dropdown">
+                            <select name="type" class="fM">
+                                <option value="請選擇縣市">請選擇縣市</option>
+                                <option value="台北市">台北市</option>
+                            </select>
+                            <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">鄉鎮<span class="error">*</span><br>市區</span>
+                        <div class="dropdown">
+                            <select name="type" class="fM">
+                                <option value="請選擇縣市">請選擇鄉鎮市區</option>
+                                <option value="信義區">信義區</option>
+                            </select>
+                            <div class="arrow"><i class="fas fa-caret-down fa-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">地址<span class="error">*</span></span>
+                        <div class="input"><input type="text" class="fM" placeholder="" value=""></div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">郵遞<span class="error">*</span><br>區號</span>
+                        <div class="input"><input type="text" class="fM" placeholder="" value=""></div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">電話<span class="error">*</span><br>號碼</span>
+                        <div class="input"><input type="text" class="fM" placeholder="" value=""></div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">電子<span class="error">*</span><br>信箱</span>
+                        <div class="input"><input type="text" class="fM" placeholder="" value=""></div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">身分證<br>字號</span>
+                        <div class="input"><input type="text" class="fM" placeholder="" value=""></div>
+                    </div>
+                    <div class="itemH width">
+                        <span class="fM margin singleF">備註</span>
+                        <div class="input"><input type="text" class="fM" placeholder="" value=""></div>
+                    </div>
+                </div>
+                <label class="check">
+                    <input type="checkbox" name="checkbox1" checked> <!-- checked -->
+                    <span class="checkmark checkbox"></span>
+                    <span class="text fM">索取收據</span>
+                </label>
+                <div class="itemH width">
+                    <a class="button gray" href="index.html">
+                        <span class="fM bold">返回</span>
+                    </a>
+                    <a class="button" href="input.html">
+                        <span class="fM bold">捐款</span>
+                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    </a>
+                </div>
+                <div class="itemH width between padding">
+                    <div class="itemH">
+                        <a class="textButton fS">EN/繁</a>
+                        <span class="fS gray margin">|</span>
+                        <a class="textButton fS">服務條款</a>
+                        <span class="fS gray margin">|</span>
+                        <a class="textButton fS">隱私權政策</a>
+                    </div>
+                    <span class="fS gray">2022 © QuickPay</span>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
