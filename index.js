@@ -1,27 +1,37 @@
-// All Popup (Click outside popup close)
-window.onclick = function(event) {
-    if (event.target == popMessage) {
-        popMessage.style.display = "none";
-    }
-    else if (event.target == popSuccess) {
-        popSuccess.style.display = "none";
-    }
-}
-
-// Popup (Message)
-var popMessage          = document.getElementById("popMessage");
-var buttonMessage       = document.getElementById("buttonMessage");
-var close               = popMessage.getElementsByClassName("close")[0];
-var submit              = popMessage.getElementsByClassName("submit")[0];
-var cancel              = popMessage.getElementsByClassName("cancel")[0];
-buttonMessage.onclick   = function() { popMessage.style.display = "flex"; }
-close.onclick           = function() { popMessage.style.display = "none"; }
-submit.onclick          = function() { popMessage.style.display = "none"; }
-cancel.onclick          = function() { popMessage.style.display = "none"; }
-
 // Popup (Success)
-var popSuccess          = document.getElementById("popSuccess");
-var buttonSuccess       = document.getElementById("buttonSuccess");
-var submit              = popSuccess.getElementsByClassName("submit")[0];
-buttonSuccess.onclick   = function() { popSuccess.style.display = "flex"; }
-submit.onclick          = function() { popSuccess.style.display = "none"; }
+function popSuccess() {
+    var popSuccess  = document.getElementById("popSuccess");
+    var submit      = popSuccess.getElementsByClassName("submit")[0];
+    submit.onclick  = function() { popSuccess.style.display = "none"; }
+    window.onclick  = function(event) { if (event.target == popSuccess) { popSuccess.style.display = "none"; }}
+    popSuccess.style.display = "flex"; }
+
+// Popup (Refund)
+function popRefund() {
+    var popRefund   = document.getElementById("popRefund");
+    var close       = popRefund.getElementsByClassName("close")[0];
+    var submit      = popRefund.getElementsByClassName("submit")[0];
+    close.onclick   = function() { popRefund.style.display = "none"; }
+    submit.onclick  = function() { popRefund.style.display = "none"; }
+    window.onclick  = function(event) { if (event.target == popRefund) { popRefund.style.display = "none"; }}
+    popRefund.style.display = "flex"; }
+
+// Popup (Info)
+function popInfo() {
+    var popInfo     = document.getElementById("popInfo");
+    var close       = popInfo.getElementsByClassName("close")[0];
+    var submit      = popInfo.getElementsByClassName("submit")[0];
+    close.onclick   = function() { popInfo.style.display = "none"; }
+    submit.onclick  = function() { popInfo.style.display = "none"; }
+    window.onclick  = function(event) { if (event.target == popInfo) { popInfo.style.display = "none"; }}
+    popInfo.style.display = "flex"; }
+
+// Popup (Credit)
+function popCredit() {
+    var popCredit   = document.getElementById("popCredit");
+    var close       = popCredit.getElementsByClassName("close")[0];
+    var submit      = popCredit.getElementsByClassName("submit")[0];
+    close.onclick   = function() { popCredit.style.display = "none"; }
+    submit.onclick  = function() { popCredit.style.display = "none"; }
+    window.onclick  = function(event) { if (event.target == popCredit) { popCredit.style.display = "none"; }}
+    popCredit.style.display = "flex"; }

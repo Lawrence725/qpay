@@ -116,6 +116,7 @@ body    { margin: 0; }
 
     // Component
     .lineH { width: 100%; height: 1px; margin: 5px 0; background-color: @cG5; }
+    .spaceS { width: 100%; height: 10px; }
     .img { width: 100px; height: 100px; margin: 5px;
         img { width: 100%; height: 100%; }}
     .icon { min-width: 20px; min-height: 20px; margin: 5px; border-radius: 99px; position: relative; display: flex; align-items: center; justify-content: center; color: @c1;
@@ -161,18 +162,19 @@ body    { margin: 0; }
     // Popup
     .popup { width: 100%; height: 100%; left: 0; top: 0; position: fixed; display: none; align-items: center; justify-content: center; overflow-x: hidden; overflow-y: hidden; z-index: 2; background-color: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
         &.notice .popBody { width: 300px; height: fit-content; }
-        &.success .popBody { border-radius: 0; }
+        &.info .popBody { width: 300px; }
         .close { top: 20px; right: 20px; height: 20px; width: 20px; position: absolute; display: flex; align-items: center; justify-content: center; color: @cG4;
             &:hover, &:focus { color: @cG1; }}
-        .popBody { width: 100%; height: calc(100% - 60px); padding: 10px; margin: 20px; border-radius: 5px; position: relative; display: flex; flex-direction: column; background-color: white;
-            .popHeader { margin: 5px; display: flex; flex-direction: column; }
+        .popBody { width: 100%; max-height: calc(100% - 60px); padding: 10px; margin: 20px; position: relative; display: flex; flex-direction: column; background-color: white;
+            .popHeader { margin: 5px; display: flex; flex-direction: column; align-items: center; }
             .popMain { margin: 15px 0px; display: flex; flex-direction: column; align-items: center; justify-content: center;
-                &.full { height: 100%; margin: 15px 5px; border-radius: 5px; align-items: flex-start; justify-content: flex-start; background-color: white; overflow-y: auto; 
+                &.full { height: 100%; margin: 15px 5px; align-items: flex-start; justify-content: flex-start; background-color: white; overflow-y: auto; 
                     &::-webkit-scrollbar { -webkit-appearance: none; }
                     &::-webkit-scrollbar:vertical { width: 10px; }
                     &::-webkit-scrollbar-thumb { border-radius: 5px; background-color: @cG5; border: 2.5px solid white; } /* should match background, can't be transparent */}
                 > div, > span { margin: 5px 0; }
                 ol { padding: 0 0 20px 30px;
+                    &:first-child { margin: 0; padding: 0 0 0 30px; }
                     &.chin { list-style-type: none;
                         > li { margin-left: -20px; }}
                     &.romanU { list-style-type: upper-roman; }

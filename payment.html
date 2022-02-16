@@ -75,7 +75,7 @@
                             <div class="img iW"><img src="img/Mastercard.svg"></div>
                             <div class="img iW"><img src="img/JCB.svg"></div>
                         </a>
-                        <a class="itemH width margin middle checkbox"> <!-- class: active -->
+                        <a class="itemH width margin middle checkbox" onclick="popCredit()"> <!-- class: active -->
                             <div class="icon black"><i class="far fa-credit-card fa-lg"></i></div>
                             <span class="fL">信用卡</span>
                         </a>
@@ -109,15 +109,17 @@
                     <a class="button gray" href="input.html">
                         <span class="fM bold">返回</span>
                     </a>
-                    <a id="buttonSuccess" class="button">
+                    <a class="button" onclick="popSuccess()">
                         <span class="fM bold">確定付款</span>
                     </a>
                 </div>
+                <span class="fS center gray">按下確定付款按鈕，即表示您確認已詳閱並且同意<br>
+                    <a class="secondary" onclick="popInfo()">《線上點餐需知》</a>和<a class="secondary" onclick="popRefund()">《退款流程及方式》</a></span>
                 <div class="itemH width between padding">
                     <div class="itemH">
                         <a class="textButton fS">EN/繁</a>
                         <span class="fS gray margin">|</span>
-                        <a id="buttonMessage" class="textButton fS">服務條款</a>
+                        <a class="textButton fS">服務條款</a>
                         <span class="fS gray margin">|</span>
                         <a class="textButton fS">隱私權政策</a>
                     </div>
@@ -125,7 +127,7 @@
                 </div>
             </section>
             <!-- Popup (Success) -->
-            <section id="popSuccess" class="popup notice success">
+            <section id="popSuccess" class="popup notice">
                 <div class="popBody">
                     <section class="popMain">
                         <div class="icon secondary"><i class="far fa-check-circle fa-4x"></i></div>
@@ -172,19 +174,66 @@
                     </section>
                 </div>
             </section>
-            <!-- Popup (Message) -->
-            <section id="popMessage" class="popup notice">
+            <!-- Popup (Refund) -->
+            <section id="popRefund" class="popup notice">
                 <div class="popBody">
                     <a class="close"><i class="fas fa-times"></i></a>
                     <section class="popHeader">
-                        <span class="fL">標題</span>
+                        <span class="fL">退款流程及方式</span>
                     </section>
                     <section class="popMain">
-                        <span class="fM">訊息1</span>
-                        <span class="fM">訊息2</span>
+                        <ol>
+                            <li class="fM">已經完成接單的訂單，無法線上退款。</li>
+                            <li class="fM">若需退單退款，請直接聯絡門市人員，門市人員確認訂單狀況，會協助進行退單退款。</li>
+                        </ol>
                     </section>
                     <section class="popFooter">
-                        <a class="button cancel gray"><span class="fS">取消</span></a>
+                        <a class="button submit"><span class="fS">確認</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (Info) -->
+            <section id="popInfo" class="popup info">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fL">線上點餐需知</span>
+                    </section>
+                    <section class="popMain full">
+                        <span class="fM">一、點餐說明</span>
+                        <span class="fM bold">一般點餐訂購流程</span>
+                        <span class="fM">選擇用方式 > 選購餐點 > 前往結帳 > 填寫資料  > 選擇付款方式 > 一鍵下訂 > 選擇付款方式 > 購物需知確認 > 訂購完成</span>
+                        <span class="fM bold">訂單查詢</span>
+                        <span class="fM">當您完成訂購程序後，您可以利用頁面下方選單的「訂單」訂單查詢功能，查詢目前的訂單狀態。</span>
+                        <div class="spaceS"></div>
+                        <span class="fM">二、付款方式</span>
+                        <span class="fM">目前提供多種支付方式。</span>
+                        <span class="fM bold">信用卡線上刷卡</span>
+                        <span class="fM">您可使用信用卡的線上刷卡服務，當您在結帳頁面進行信用卡相關資料填寫時，請務必詳實填寫正確資料，以利銀行做信用卡資料的審核。</span>
+                        <span class="fM">※【提醒您】使用信用卡付費時，依據信用卡定型化契約第六條（契約雙方之基本義務）之規定：銀行僅授權持卡人本人在信用卡有效期限內分別使用，不得讓與、轉借、提供擔保或以其他方式將信用卡之占有轉讓予第三人或交其使用。</span>
+                    </section>
+                    <section class="popFooter">
+                        <a class="button submit"><span class="fS">確認</span></a>
+                    </section>
+                </div>
+            </section>
+            <!-- Popup (Credit) -->
+            <section id="popCredit" class="popup notice">
+                <div class="popBody">
+                    <a class="close"><i class="fas fa-times"></i></a>
+                    <section class="popHeader">
+                        <span class="fL">信用卡線上刷卡</span>
+                    </section>
+                    <section class="popMain full">
+                        <span class="fM">您即將進入聯合信用卡處理中心授權驗證服務，目前系統配合銀行如下：</span>
+                        <div class="spaceS"></div>
+                        <span class="fM bold">信用卡</span>
+                        <span class="fM">三信 / 上海 / 元大 / 日盛 / 台北富邦 / 永豐 / 玉山 / 兆豐 / 安泰 / 第一 / 凱基 / 華泰 / 新光 / 陽信 / 遠東 / 聯邦 / 永旺 / 樂天 / 華南 / 花旗 / 中信 / 國泰世華 / 台新 / 匯豐 / 彰銀 / 合庫 / 土銀 / 台中銀行 / 美國運通</span>
+                        <div class="spaceS"></div>
+                        <span class="fM bold">簽章金融卡</span>
+                        <span class="fM">中信 / 第一 / 匯豐 / 國泰世華 / 玉山 / 華南 / 兆豐 / 合庫 / 上海 / 台北富邦 / 彰銀 / 永豐 / 台新 / 王道 / 美國運通</span>
+                    </section>
+                    <section class="popFooter">
                         <a class="button submit"><span class="fS">確認</span></a>
                     </section>
                 </div>
